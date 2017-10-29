@@ -4,3 +4,8 @@ Thumbs.db
 #Ignore metadata created by OSX
 .DS_Store
 ._*
+
+#Ignore files created by Jekyll
+_site
+.sass-cache
+.jekyll-metadata
