@@ -26,7 +26,7 @@ Also, if you are able to confirm that the new version works in a particular sett
 
 ## License Change
 
-For the Excel-DNA project, I've changed to the standard [MIT license][mit-license]. This has become the most common open-source license aligned with my intention of making Excel-DNA free for all use, including commercial use.
+~~For the Excel-DNA project, I've changed to the standard [MIT license][mit-license]. This has become the most common open-source license aligned with my intention of making Excel-DNA free for all use, including commercial use~~. **UPDATE 2015-09-03**: Excel-DNA is (again) licensed under the [zlib license][license]. More details [here][post-v0-33-8-rc2].
 
 If you have any concerns with this change, please let me know.
 
@@ -62,6 +62,8 @@ Thank you for your continued support of Excel-DNA!
 [codeplex-release]: https://exceldna.codeplex.com/releases/view/616591
 [addin-nupkg]: https://www.nuget.org/packages/ExcelDna.AddIn/
 [excel-dna-group]: https://groups.google.com/forum/#!forum/exceldna
+[license]: https://github.com/Excel-DNA/ExcelDna/blob/master/LICENSE.txt
+[post-v0-33-8-rc2]: /2015/09/03/excel-dna-version-0-33-8-rc2-available/
 [mit-license]: https://github.com/Excel-DNA/ExcelDna/blob/master/LICENSE.txt
 [exceldna-github-home]: https://github.com/Excel-DNA
 [exceldna-github-repo]: https://github.com/Excel-DNA/ExcelDna/
