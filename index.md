@@ -8,7 +8,7 @@ Excel-DNA is an independent project to integrate .NET into Excel. With Excel-DNA
 ## Getting Started
 If you are using a version of Visual Studio that supports the [NuGet Package Manager][nuget] (including Visual Studio 2012 Express for Windows Desktop or any more recent Visual Studio version), the easiest way to make an Excel-DNA add-in is to:
 
-1. Create a new **Class Library** project in Visual Basic, C# or F#;
+1. Create a new **Class Library (.NET Framework)** project in Visual Basic, C# or F#;
 
 2. Use the **Manage NuGet Packages** dialog or the **Package Manager Console** to install the **Excel-DNA** package:
 {% highlight powershell %}
