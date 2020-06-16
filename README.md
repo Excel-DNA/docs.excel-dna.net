@@ -1,6 +1,6 @@
-# [excel-dna.github.io](https://excel-dna.github.io)
+# [docs.excel-dna.net](https:///docs.excel-dna.net)
 
 This is a work-in-progress of centralizing Excel-DNA's documentation and blog into a single place.
 
-Visit https://excel-dna.github.io to see a live version of this repository.
+Visit http://docs.excel-dna.net to see a live version of this repository.
 
