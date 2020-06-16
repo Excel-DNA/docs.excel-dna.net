@@ -1,10 +1,10 @@
-<header class="site-header" role="banner">
+<header class="site-header">
 
   <div class="wrapper">
     {% assign default_paths = site.pages | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
     <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-  
+
     {% if page_paths %}
       <nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -19,15 +19,17 @@
         </label>
 
         <div class="trigger">
-          <a class="page-link" href="/">Home</a>
-          <a class="page-link" href="/support/">Support</a>
-          <a class="page-link" href="/blog/">Blog</a>
-          <a class="page-link" href="/testimonials/">Testimonials</a>
-          <a class="page-link" href="http://exceldna.codeplex.com">CodePlex</a>
+          <a class="page-link" href="/ExcelDna">Home</a>
+          <a class="page-link" href="/ExcelDna/support/">Support</a>
+          <a class="page-link" href="/ExcelDna/Documentation">Documentation</a>
+          <a class="page-link" href="/ExcelDna/Getting Started">Getting Started</a>
+          <a class="page-link" href="/ExcelDna/Reference">Reference</a>
+          <a class="page-link" href="https://github.com/Excel-DNA/ExcelDna/wiki">Wiki</a>
+		  <a class="page-link" href="https://excel-dna.github.io/">Blog</a>
           <a class="page-link" href="https://github.com/Excel-DNA/ExcelDna">GitHub</a>
-          <a class="page-link" href="http://groups.google.com/group/exceldna">Google Group</a>
+          <a class="page-link" href="https://groups.google.com/group/exceldna">Google Group</a>
           </div>
       </nav>
-    {% endif %}
+    {%- endif -%}
   </div>
 </header>
