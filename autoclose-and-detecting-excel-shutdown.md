@@ -46,8 +46,8 @@ using ExcelDna.Integration;
 using ExcelDna.Integration.Extensibility;
 using ExcelDna.Integration.CustomUI;
 
-	[ComVisible(true)](ComVisible(true))
-	public class MyComAddIn : ExcelComAddIn
+    [ComVisible(true)](ComVisible(true))
+    public class MyComAddIn : ExcelComAddIn
     {
         public MyComAddIn()
         {

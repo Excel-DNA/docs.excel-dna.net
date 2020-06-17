@@ -27,14 +27,14 @@ Office implements a comprehensive security system, which is accessed via the _Fi
 
 * In Excel, just File > Options > Addins.  Install as an ordinary addin, not as a COM add-in even though communication may be using COM.
 * From VBA do
-	* Application.addins.Add "myfilename.xll"
-	* Application.addins("myTitle").Installed = True.  Title is defined by .dna file Name="myTitle", not necessarily the file name.
+    * Application.addins.Add "myfilename.xll"
+    * Application.addins("myTitle").Installed = True.  Title is defined by .dna file Name="myTitle", not necessarily the file name.
 * Have an installer add registry
-	* Key: HKCU/Software/Microsoft/Office/$version/Excel/Options, 
-	* Values: OPEN, OPEN1, OPEN2 etc.) 
-	* Set it to /R "C:\...\MyAddIn.xll"
-	* (Do not leave gaps if uninstalling on Excel 2007+.  Eg OPEN, OPEN1, OPEN3.  Best to do nothing, Excel will sort itself out next time it is opened.)
-	* (Can be done in a .bat file using reg)
+    * Key: HKCU/Software/Microsoft/Office/$version/Excel/Options, 
+    * Values: OPEN, OPEN1, OPEN2 etc.) 
+    * Set it to /R "C:\...\MyAddIn.xll"
+    * (Do not leave gaps if uninstalling on Excel 2007+.  Eg OPEN, OPEN1, OPEN3.  Best to do nothing, Excel will sort itself out next time it is opened.)
+    * (Can be done in a .bat file using reg)
 * Install using COM, e.g. VB Script.  (But some sites ban vb script for being "Insecure".)
 
 {% highlight vbnet %}

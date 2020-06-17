@@ -12,7 +12,7 @@ Otherwise you would reference an interop assembly that defines the COM types to 
 There are different options for the interop assembly:
 
 *  Use the version-specific official Primary Interop Assembly:
-	* [Excel 2010 PIA](http://www.microsoft.com/en-us/download/details.aspx?id=3508)
+    * [Excel 2010 PIA](http://www.microsoft.com/en-us/download/details.aspx?id=3508)
 
 * Install the "Excel-DNA.Interop" NuGet package, which gives you the Excel 2010 PIA assemblies.
 

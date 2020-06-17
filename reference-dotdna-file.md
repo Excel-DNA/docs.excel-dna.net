@@ -8,21 +8,21 @@ title: Excel - DNA Reference: .dna file
 Elements and attributes are below.   See *.dna files in downloaded samples.
 
 * DnaLibrary 
-	* Name
-	* Description
-	* Language
-	* RuntimeVersion either "v4.0" for .Net 4, or "v2.0" (default) for _all_ earlier versions.  Ie. use "v2.0" for .Net 3.5.  Note that v4.0 is required for 64bit Office.
-	* CompilerVersion
-	* ShadowCopyFiles="true" enables shadow copying for the add-in's AppDomain.
+    * Name
+    * Description
+    * Language
+    * RuntimeVersion either "v4.0" for .Net 4, or "v2.0" (default) for _all_ earlier versions.  Ie. use "v2.0" for .Net 3.5.  Note that v4.0 is required for 64bit Office.
+    * CompilerVersion
+    * ShadowCopyFiles="true" enables shadow copying for the add-in's AppDomain.
 
 * ExternalLibrary
-	* Path
-	* Pack
-	* LoadFromBytes.  if ="true" then the .dll is loaded more dynamically which can avoid needing to shut down Excel during debugging.  However, it can cause issues with multiple active instances and harder debugging.
-	* ExplicitExports="true" Prevents every static public function from becomming a UDF, they will need an explicit [ExcelFunction...](../Reference) Annotation.
+    * Path
+    * Pack
+    * LoadFromBytes.  if ="true" then the .dll is loaded more dynamically which can avoid needing to shut down Excel during debugging.  However, it can cause issues with multiple active instances and harder debugging.
+    * ExplicitExports="true" Prevents every static public function from becomming a UDF, they will need an explicit [ExcelFunction...](../Reference) Annotation.
 
 * Project*
-	* SourceItem*
+    * SourceItem*
 * Image*
 
 * CustomUI  Nest <customUI under this to define ribbon.

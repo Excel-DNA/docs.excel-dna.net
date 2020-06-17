@@ -88,20 +88,20 @@ If you are a VBA developer interested in moving to .NET, you should start with [
 * [Stock Quote Add-In for Excel](https://github.com/jbaurle/PMStockQuote) provides access to the Yahoo financial data through an Excel-DNA add-in.
 * [DB-Addin for Excel](https://rkapl123.github.io/DBAddin/) is an MS Excel Addin for retrieving Database data via userdefined functions into Excel and writing Data (DBMapper), executing generic DML (DBAction) and doing all this in Sequences (DBSequence).
 * Alex Chirokov's **ACQ** add-in provides a library of interpolation routines for Excel. The add-in includes 1D and 2D interpolators, scatter plot smoothing and a Mersenne Twister random number generator. To have a closer look:
-	* Find the current release on GitHub: [https://github.com/ratesquant/ACQ/releases][acq-releases]
-	* With the main repository on GitHub at [https://github.com/ratesquant/ACQ][acq-repo]
-	* A very clear introduction to the library, including some of it's advanced features, is posted on Code Project: [http://www.codeproject.com/Articles/1097174/Interpolation-in-Excel-using-Excel-DNA][interpolation-article]
+    * Find the current release on GitHub: [https://github.com/ratesquant/ACQ/releases][acq-releases]
+    * With the main repository on GitHub at [https://github.com/ratesquant/ACQ][acq-repo]
+    * A very clear introduction to the library, including some of it's advanced features, is posted on Code Project: [http://www.codeproject.com/Articles/1097174/Interpolation-in-Excel-using-Excel-DNA][interpolation-article]
 Features I like about the add-in (apart from it using Excel-DNA) include:
-	* A liberal open-source license
-	* A clear and authoritative implementation of a particular domain
-	* Very nice example of using object handles - an interpolator is build from the data, and then used to interpolate many values. ACQ has a clean implementation and great example of this technique.
-	* All the functions have a common prefix ("`=acq`..."), making them easy to find in the function list, and use with the Excel-DNA IntelliSense extension.
-	* PS: ACQ has a bonus feature that implements a Sudoku solver (and generator)! See the write-up here: [Sudoku Solver in Excel using C# and Excel-DNA][sudoku-solver-article].
+    * A liberal open-source license
+    * A clear and authoritative implementation of a particular domain
+    * Very nice example of using object handles - an interpolator is build from the data, and then used to interpolate many values. ACQ has a clean implementation and great example of this technique.
+    * All the functions have a common prefix ("`=acq`..."), making them easy to find in the function list, and use with the Excel-DNA IntelliSense extension.
+    * PS: ACQ has a bonus feature that implements a Sudoku solver (and generator)! See the write-up here: [Sudoku Solver in Excel using C# and Excel-DNA][sudoku-solver-article].
 * I noticed a very nice add-in developed by [Bryan McKelvey][bryan-mckelvey] called [FinAnSu][finansu]. The whole add-in is generously available under the MIT open source license, and is a fantastic example of what can be built with Excel-DNA.
-	* [FinAnSu][finansu] uses a ribbon interface to make the various functions and macros easy to find. The RTD server support is used to implement asynchronous data update functions, providing a live quote feed from Bloomberg, Google or Yahoo! And then there is a bunch of useful-looking financial functions. Here's a little preview:
+    * [FinAnSu][finansu] uses a ribbon interface to make the various functions and macros easy to find. The RTD server support is used to implement asynchronous data update functions, providing a live quote feed from Bloomberg, Google or Yahoo! And then there is a bunch of useful-looking financial functions. Here's a little preview:
 ![FinAnSu Quote Animated][finansu-quote-img]
-	* Find the project on Google code: [http://code.google.com/p/finansu/][finansu], with detailed documentation on the wiki: [http://code.google.com/p/finansu/wiki/Introduction][finansu-docs].
-	* You can browse through the [source code][finansu-source] online, and you can also download a copy of the whole project.
+    * Find the project on Google code: [http://code.google.com/p/finansu/][finansu], with detailed documentation on the wiki: [http://code.google.com/p/finansu/wiki/Introduction][finansu-docs].
+    * You can browse through the [source code][finansu-source] online, and you can also download a copy of the whole project.
 
 ### Support
 And if you get stuck or have any questions, don't hesitate to ask on the [google groups mail list](https://groups.google.com/group/exceldna).
@@ -114,9 +114,9 @@ And if you get stuck or have any questions, don't hesitate to ask on the [google
 * [Statfactory's NeXL](https://statfactory.wordpress.com/) are F# based connectors to get data from various platforms (Bloomberg, Quandl, Worldbank, IMF and the R language) into Excel.
 * For making Excel Add-Ins in Python, have a look at [PyXLL](http://www.pyxll.com/index.html). 
 * There are a number of  {"C/C++"} libraries and tools that make creating .xlls easier than using the [Excel SDK](https://docs.microsoft.com/en-us/office/client-developer/excel/welcome-to-the-excel-software-development-kit) directly:
-	* I initially used the [XLW](http://xlw.sourceforge.net/) open-source library.
-	* The [XLL+ toolkit](https://www.planatechsolutions.com/xllplus/) is a highly regarded commercial option.
-	* Keith Lewis has some modern C++ libraries for making .xlls, available on CodePlex at [https://archive.codeplex.com/?p=xll](https://archive.codeplex.com/?p=xll).
+    * I initially used the [XLW](http://xlw.sourceforge.net/) open-source library.
+    * The [XLL+ toolkit](https://www.planatechsolutions.com/xllplus/) is a highly regarded commercial option.
+    * Keith Lewis has some modern C++ libraries for making .xlls, available on CodePlex at [https://archive.codeplex.com/?p=xll](https://archive.codeplex.com/?p=xll).
 
 ## Performance
 Information about the performance of Excel-DNA user-defined functions can be found on the [ExcelDna Performance](ExcelDna Performance) page.

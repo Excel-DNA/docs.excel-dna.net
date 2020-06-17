@@ -68,10 +68,10 @@ As an example, the code below shows how you could create a helper class to deal 
             //    return "<<Empty>>"; // Would have been null
             //else if (arg is ExcelReference)
             //  // Calling xlfRefText here requires IsMacroType=true for this function.
-			//				return "Reference: " + 
+            //                return "Reference: " + 
             //                     XlCall.Excel(XlCall.xlfReftext, arg, true);
-			//			else
-			//				return "!? Unheard Of ?!";
+            //            else
+            //                return "!? Unheard Of ?!";
         }        
 
         internal static double Check(object arg, double defaultValue)

@@ -49,7 +49,7 @@ Change the contents of Test1.dna to:
     <![CDATA[
 
         using ExcelDna.Integration;
-	
+    
                 public class MyFunctions
                 {
                         [ExcelFunction(Description="Joins a string to a number", Category="My functions")](ExcelFunction(Description=_Joins-a-string-to-a-number_,-Category=_My-functions_))

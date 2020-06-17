@@ -23,14 +23,14 @@ where all parameter and return types are among the following :
 * String
 * Object
 (object return values should be one of
-	* Double
-	* String
-	* Object[,](,)
-	* Boolean
-	* ExcelError
-	* ExcelEmpty
-	* ExcelMissing
-	* ExcelReference)
+    * Double
+    * String
+    * Object[,](,)
+    * Boolean
+    * ExcelError
+    * ExcelEmpty
+    * ExcelMissing
+    * ExcelReference)
  
 For other data types (like the other types currently supported) and method extensions, I will focus on the ease with which extensions can be added and the availability and usability of more powerful features. In upcoming versions I want to add more type conversions, and include the ability to add your own type converters and function wrappers.
  

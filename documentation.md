@@ -22,8 +22,8 @@ Otherwise, browse through the list of other resources and examples on the [Docum
 * [Optional Parameters and Default Values](Optional Parameters and Default Values)
 * [Keyboard Shortcut](Keyboard Shortcut)
 * [Excel Programming Interfaces](Excel Programming Interfaces)
-	* [Using the Excel COM Automation Interfaces](Using the Excel COM Automation Interfaces)
-	* [Excel C API](Excel C API)
+    * [Using the Excel COM Automation Interfaces](Using the Excel COM Automation Interfaces)
+    * [Excel C API](Excel C API)
 * [Ribbon Customization](Ribbon Customization) and various ribbon links.
 * A note on [AutoClose and Detecting Excel Shutdown](AutoClose and Detecting Excel Shutdown).
 * [Debugging Notes](Debugging notes)

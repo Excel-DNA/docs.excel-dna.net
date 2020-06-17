@@ -45,9 +45,9 @@ Excel-DNA now has a core implementation to support asynchronous functions. In a 
 
 The parameters to ExcelAsyncUtil.Run are:
 
-	* {{string functionName}} - identifies this async function.
-	* {{object parameters}} - identifies the set of parameters the function is being called with. Can be a single object (e.g. a string) or an object[]() array of parameters. It should include all the parameters to your UDF.
-	* {{ ExcelFunc function}} - a delegate that will be evaluated asynchronously.
+    * {{string functionName}} - identifies this async function.
+    * {{object parameters}} - identifies the set of parameters the function is being called with. Can be a single object (e.g. a string) or an object[]() array of parameters. It should include all the parameters to your UDF.
+    * {{ ExcelFunc function}} - a delegate that will be evaluated asynchronously.
 
 ## More Samples
 

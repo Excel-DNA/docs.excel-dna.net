@@ -14,9 +14,9 @@ A useful helper that complements this is {{ExcelIntegration.GetExportedAssemblie
 The basic idea would be:
 
 In your {{AutoOpen}}, call some kind of {{UpdateRegistrations()}} which works like this:
-1.	Get all the methods you’re interested in via Reflection (from the assemblies returned by {{ExcelIntegration.GetExportedAssemblies()}}).
-2.	Build delegates using lambda expressions that add the optional handling (or using the Expression Tree API for even more control).
-3.	Register the delegates with the right attributes via {{ExcelIntegration.RegisterDelegates}}.
+1.    Get all the methods you’re interested in via Reflection (from the assemblies returned by {{ExcelIntegration.GetExportedAssemblies()}}).
+2.    Build delegates using lambda expressions that add the optional handling (or using the Expression Tree API for even more control).
+3.    Register the delegates with the right attributes via {{ExcelIntegration.RegisterDelegates}}.
 
 
 This code should be a start:
@@ -92,28 +92,28 @@ public class TestAddIn : IExcelAddIn
         }
     } 
 
-	public void AutoClose() {}
+    public void AutoClose() {}
     
     static Func<string, string> MakeDelegate(string sayWhat)
-	{
-		Func<string, string> saySomethingToName = name => sayWhat + name;
-		return saySomethingToName;
-	}
-	
-	static Func<double, object> MakeAddNumber(double numberToAdd)
-	{
-	  return x => 
-	  {
-		try
-		{
-		  return x + numberToAdd;
-		}
-		catch (Exception ex)
-		{
-		  return double.NaN;
-		}
-	  };
-	}
+    {
+        Func<string, string> saySomethingToName = name => sayWhat + name;
+        return saySomethingToName;
+    }
+    
+    static Func<double, object> MakeAddNumber(double numberToAdd)
+    {
+      return x => 
+      {
+        try
+        {
+          return x + numberToAdd;
+        }
+        catch (Exception ex)
+        {
+          return double.NaN;
+        }
+      };
+    }
 }
 
 ]]>
