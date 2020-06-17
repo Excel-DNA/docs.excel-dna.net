@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Reactive Extensions for Excel - VB.NET
+title: "Reactive Extensions for Excel - VB.NET"
 ---
-
-{% highlight vbnet %}
+```vb
 Imports System.Runtime.CompilerServices
 Imports ExcelDna.Integration
 
@@ -16,7 +15,7 @@ Public Module RxExcel
 
     Public Function Observe(Of T)(functionName As String, parameters As Object, _
                            observableSource As Func(Of IObservable(Of T))) As Object
-        Return ExcelAsyncUtil.Observe(functionName, parameters, 
+        Return ExcelAsyncUtil.Observe(functionName, parameters,
                                      Function() observableSource().ToExcelObservable())
     End Function
 End Module
@@ -32,8 +31,8 @@ Public Class ExcelObservable(Of T)
 
     Public Function Subscribe(observer As IExcelObserver) As IDisposable _
         Implements IExcelObservable.Subscribe
-        Return _observable.Subscribe(Sub(value) observer.OnNext(value), 
+        Return _observable.Subscribe(Sub(value) observer.OnNext(value),
             Sub(ex) observer.OnError(ex), Sub() observer.OnCompleted())
     End Function
 End Class
-{% endhighlight %}
+```

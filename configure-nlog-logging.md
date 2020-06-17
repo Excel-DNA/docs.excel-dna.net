@@ -1,19 +1,22 @@
 ---
 layout: page
-title: Configure NLog logging
+title: "Configure NLog logging"
 ---
 This is a guide to setting up logging from within your Excel-DNA add-in, using the NLog library. I used Visual Studio 2012 and C# to put together the example, but nothing here should be specific to the particular versions or language used.
 
 ## 1. Create a new C# Class Library
+
 Start Visual Studio, select _New Project..._ and make a new C# Class Library project. I targeted the .NET Framework 4.5 since that is the default, but .NET Framework 4 should also work fine. I called my library **NLogTest**.
 
 ## 2. Install the Excel-DNA NuGet package
+
 Open the NuGet Package Manager Console (Tools -> Library Package Manager -> Package Manager Console) and enter "Install-Package Excel-DNA". This will install the Excel-DNA package and display the Readme.txt file when complete.
 
 ## 3. Test basic add-in functionality
+
 From inside the displayed Readme.txt file, copy the C# sample snippet into the file Class1.cs:
 
-{% highlight csharp %}
+```csharp
 using ExcelDna.Integration;
 
 public static class MyFunctions
@@ -24,7 +27,7 @@ public static class MyFunctions
         return "Hello " + name;
     }
 }
-{% endhighlight %}
+```
 
 (You can also rename the Class1.cs file if you want to.)
 
@@ -46,7 +49,7 @@ The name of the actual Excel add-in is _NLogTest-AddIn.xll_ (this is the name se
 
 ## Add the NLog configuration entries
 The configuration file might look like this:
-{% highlight xml %}
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <configSections>
@@ -61,17 +64,17 @@ The configuration file might look like this:
     </rules>
   </nlog>
 </configuration>
-{% endhighlight %}
+```
 
 ## Add some logging to your function
-{% highlight csharp %}
+```csharp
 using ExcelDna.Integration;
 using NLog;
 
 public static class MyFunctions
 {
     private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-        
+
     [ExcelFunction(Description = "My first .NET function")](ExcelFunction(Description-=-_My-first-.NET-function_))
     public static string HelloDna(string name)
     {
@@ -79,7 +82,7 @@ public static class MyFunctions
         return "Hello " + name;
     }
 }
-{% endhighlight %}
+```
 
 Press F5 to build and start Excel, and enter the function into a cell: =HelloDna("World!")
 (If there is an error in the configuration or in using NLog, the function will return _#VALUE!_)
@@ -90,12 +93,12 @@ Check the bin\Debug output directory  of the project - the LogFile.txt should be
 ## Add NLog to the packed .xll
 Excel-DNA can pack the dependencies of an .xll into a single file add-in. The _NLogTest-AddIn.xll.config_ file is automatically added by the ExcelDnaPack utility, but we also want to add the NLog library itself. To do this, update the _NLogTest-AddIn.dna_ file by adding a <Reference> entry for NLog as follows:
 
-{% highlight xml %}
+```xml
 <DnaLibrary Name="NLogTest Add-In" RuntimeVersion="v4.0">
   <Reference Path="NLog.dll" Pack="true" />
   <ExternalLibrary Path="NLogTest.dll" LoadFromBytes="true" Pack="true" />
 </DnaLibrary>
-{% endhighlight %}
+```
 
 
 Then rebuild the project again.

@@ -1,15 +1,14 @@
 ---
 layout: page
-title: Asynchronous Functions with Tasks
+title: "Asynchronous Functions with Tasks"
 ---
+This example shows how to implement an asynchronous Excel function in VB.NET using the .NET 4 Task class. This has an advantage over the `ExcelAsyncUtil.Run` method, which just runs the code on a `ThreadPool` thread. If we are able to use the .NET 4 Task class, the outstanding requests will not block any threads, so should scale better. Supporting .NET 4 Tasks also allow us to use the .NET 4.5 Async/Await language extensions.
 
-This example shows how to implement an asynchronous Excel function in VB.NET using the .NET 4 Task class. This has an advantage over the ExcelAsyncUtil.Run method, which just runs the code on a ThreadPool thread. If we are able to use the .NET 4 Task class, the outstanding requests will not block any threads, so should scale better. Supporting .NET 4 Tasks also allow us to use the .NET 4.5 Async/Await language extensions.
+We want to make an asynchronous function to download a string from a URL. I'm using the System.Net.Http package (if you're not using .NET 4.5, add to your project by getting the `Microsoft.Net.Http` package from NuGet).
 
-We want to make an asynchronous function to download a string from a URL. I'm using the System.Net.Http package (if you're not using .NET 4.5, add to your project by getting the Microsoft.Net.Http package from NuGet). 
+Our function, called `webDownloadString` will be implemented like this:
 
-Our function, called _webDownloadString_ will be implemented like this:
-
-{% highlight vbnet %}
+```vb
 Imports System.Net.Http
 Imports ExcelDna.Integration
 
@@ -22,13 +21,13 @@ Public Module WebUdf
 
     End Function
 End Module
-{% endhighlight %}
+```
 
-The implementation of the async function uses the ExcelAsyncUtil.Observe function, which takes an IExcelObservable as its last parameter. The HttpClient.GetStringAsync call returns a Task(Of String), so the missing part is the ToExcelObservable() function which converts a Task to an ExcelObservable.
+The implementation of the async function uses the ExcelAsyncUtil.Observe function, which takes an `IExcelObservable` as its last parameter. The `HttpClient.GetStringAsync` call returns a `Task<string>`, so the missing part is the `ToExcelObservable()` function which converts a `Task` to an `ExcelObservable`.
 
-ToExcelObservable is implemented like this:
+`ToExcelObservable` is implemented like this:
 
-{% highlight vbnet %}
+```vb
 Imports System.Threading.Tasks
 Imports System.Runtime.CompilerServices
 Imports ExcelDna.Integration
@@ -99,10 +98,11 @@ Module TaskExcelObservableExtensions
     End Class
 
 End Module
-{% endhighlight %}
+```
 
 We also need to initialize the Excel-DNA async support:
-{% highlight vbnet %}
+
+```vb
 Imports ExcelDna.Integration
 
 Public Class AddIn
@@ -121,9 +121,9 @@ Public Class AddIn
         Return "!!! ERROR: " & ex.ToString()
     End Function
 End Class
-{% endhighlight %}
+```
 
 Note that the string returned would be truncated at the maximum string length for Excel - either 255 characters for Excel 2003, or 32767 characters for Excel 2007+.
 
-The function can be called from an Excel sheet as **=webDownloadString("http://www.bing.com")**.
+The function can be called from an Excel sheet as `=webDownloadString("http://www.bing.com")`.
 A next step might be to build a function that use regular expressions to extract data from the downloaded string.

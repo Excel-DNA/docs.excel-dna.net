@@ -1,13 +1,12 @@
 ---
 layout: page
-title: Excel - DNA Reference: Public types in ExcelDna library
+title: "Excel-DNA Reference: Public types in Excel-DNA library"
 ---
+Intended for use within user code (all in the namepace `ExcelDna.Integration`) are the following:
 
-Intended for use within user code (all in the namepace ExcelDna.Integration) are the following:
+### Attributes
 
-### Attributes 
-
-* ExcelFunctionAttribute - for user-defined functions
+- `ExcelFunctionAttribute` - for user-defined functions
     Name
     Description
     Category (by default the name of the add-in)
@@ -16,11 +15,13 @@ Intended for use within user code (all in the namepace ExcelDna.Integration) are
     IsMacroType (# suffix)
     IsThreadSafe (??? suffix)
     IsClusterSafe (& suffix)
-* ExcelArgumentAttribute - for the arguments of user-defined functions
+
+- `ExcelArgumentAttribute` - for the arguments of user-defined functions
     Name
     Description
     AllowReference (R type) - Arguments of type object may receive ExcelReference.
-* ExcelCommandAttribute - for macro commands
+
+- `ExcelCommandAttribute` - for macro commands
     Name
     Description
     HelpTopic
@@ -28,6 +29,5 @@ Intended for use within user code (all in the namepace ExcelDna.Integration) are
     MenuName (default is library name)
     MenuText
     IsHidden
-* ExcelComClassAttribute
 
-**should we rather generate this from source code comments (XML, docfx)?**
+- `ExcelComClassAttribute`

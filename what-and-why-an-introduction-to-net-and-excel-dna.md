@@ -1,8 +1,7 @@
 ---
 layout: page
-title: What and why - An introduction to .NET and Excel-DNA
+title: "What and why - An introduction to .NET and Excel-DNA"
 ---
-
 Microsoft publishes a Software Development Kit (SDK) for Excel, that describes how to make an 'Excel add-in'. These are similar to .xla add-ins, but the code would typically be written in C or C++, and is compiled to binary file with a .xll extension. Such an Excel add-in is typically called an ".xll". Internally, it is just a normal Windows .dll file with a few pre-arranged exports so that Excel and the add-in can hook up.
 
 Xll add-in have some advantages over .xla add-ins developed in VBA. They can define user-defined worksheet functions (UDFs) which run very fast and which can integrate with newer features like multi-threaded calculation in Excel 2007+, and asynchronous calculation in Excel 2010+. A disadvantage of xll add-ins is that they are hard to develop. Typically C or C++ is used, and there are some toolkits and a nice book to help you, but it's still hard.
@@ -15,8 +14,9 @@ There is some support in Visual Studio for making Office add-ins using .NET, wit
 
 So for Excel there was a problem - how to use .NET to create full-featured and high-performance add-ins (meaning .xll add-ins). There was a commercial solution called ManagedXLL when I looked around in 2004, but it was too expensive to be useful to me. So I started an open-source project called Excel-DNA (the 'DNA' stands for DotNet for Applications, as opposed to Visual Basic for Applications).
 
-The main Excel-DNA sites are [http://excel-dna.net](http://excel-dna.net) and [https://excel-dna.github.io](https://excel-dna.github.io).
-Now (after ten years) Excel-DNA is mature and widely used as the standard .NET to Excel integration tool. But in practice, it is most useful for developers already using .NET and Visual Studio who want to make high-performance Excel add-ins. 
+The main Excel-DNA sites are [http://excel-dna.net](http://excel-dna.net) and [https://docs.excel-dna.net](https://docs.excel-dna.net).
+
+Now (after ten years) Excel-DNA is mature and widely used as the standard .NET to Excel integration tool. But in practice, it is most useful for developers already using .NET and Visual Studio who want to make high-performance Excel add-ins.
 
 To be sure, there are other ways of making .xll add-ins, including a tool called PyXll that is similar to Excel-DNA, but for the Python language rather than the .NET Framework.
 
@@ -25,4 +25,5 @@ I hope in the next few years to make it easier for Excel VBA users to upgrade to
 One guide, written from a VBA user's perspective, that you might look at to see whether you might be interested is a porting guide written by Patrick O'Beirne: [http://sysmod.wordpress.com/2012/11/06/migrating-an-excel-vba-add-in-to-a-vb-net-xll-with-excel-dna-update/](http://sysmod.wordpress.com/2012/11/06/migrating-an-excel-vba-add-in-to-a-vb-net-xll-with-excel-dna-update/)
 
 So if you have existing VBA code (mainly worksheet functions) that you want to run fast in newer versions of Excel on modern hardware, Excel-DNA is a good tool. You'd port your VBA code to VB.NET (using the free version of Visual Studio) and use Excel-DNA to glue that back to Excel. I'm more than happy to help users learning how to do this on the Google group (or sometimes directly), but there is a steep and long learning curve once you put your foot outside the familiarity of VBA.
-I believe it's worth the effort.
+
+We believe it's worth the effort.
