@@ -6,8 +6,8 @@ title: Overview
 * The core library project can be found at [https://github.com/Excel-DNA/ExcelDna](https://github.com/Excel-DNA/ExcelDna), where the latest source versions are hosted.
 * For general questions and discussion about Excel-DNA, please use the [Excel-DNA Google group](https://groups.google.com/group/exceldna).
 * Specific issues, bug reports and feature requests can be added to the [GitHub Issues](https://github.com/Excel-DNA/ExcelDna/issues) list.
-* For more about Excel-DNA, see the introductory information below, [Documentation](Documentation) pages here on Github, and the searchable (back to February 2007) [Google group](https://groups.google.com/group/exceldna) history.
-* For a permanent book-mark to the project, please use the Excel-DNA home page at [http://excel-dna.net](http://excel-dna.net).
+* For more about Excel-DNA, see the introductory information below, and the searchable (back to February 2007) [Google group](https://groups.google.com/group/exceldna) history.
+* For a permanent bookmark to the project, please use the Excel-DNA home page at [http://excel-dna.net](http://excel-dna.net).
 
 ## Introduction
 
