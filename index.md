@@ -22,7 +22,7 @@ Excel versions '97 through 2016 can be targeted with a single add-in. Advanced E
 
 Most managed UDF assemblies developed for Excel Services can be exposed to the Excel client with no modification. (Please contact us if you are interested in this feature)
 
-The latest release - [Excel-DNA version 1.00](https://excel-dna.net/2019/03/17/excel-dna-version-1-0/) - includes support for both RTD-based asynchronous worksheet functions (Excel 2002 and later) and native Excel asynchronous functions (Excel 2010 and later). The RTD-based asynchronous support is designed to (optionally) integrate with the .NET 4.0 Task-based operations, as well as the Reactive Extensions library, allowing IObservables to be exposed as 'live' worksheet UDFs - (thus 'RxExcel'). The language-specific support for asynchronous functions in C# 5, Visual Basic 11 and F# 2.0 can be easily integrated with the Excel-DNA asynchronous interfaces.
+The latest release - [Excel-DNA v1.1] - includes support for both RTD-based asynchronous worksheet functions (Excel 2002 and later) and native Excel asynchronous functions (Excel 2010 and later). The RTD-based asynchronous support is designed to (optionally) integrate with the .NET 4.0 Task-based operations, as well as the Reactive Extensions library, allowing IObservables to be exposed as 'live' worksheet UDFs - (thus 'RxExcel'). The language-specific support for asynchronous functions in C# 5, Visual Basic 11 and F# 2.0 can be easily integrated with the Excel-DNA asynchronous interfaces.
 
 ## Important Links
 The home page for Excel-DNA is at [http://www.excel-dna.net](http://www.excel-dna.net).
@@ -123,7 +123,8 @@ The Excel-DNA Runtime is free for all use, and distributed under a permissive op
 Originally, the project was hosted on [https://exceldna.codeplex.com](https://exceldna.codeplex.com), where you can still download the site in it's historic state as a package. After CodePlex' shutdown the archive site is however mostly unusable by now.
 
 ## Latest Releases
-The current version is [Excel-DNA v1.1](https://excel-dna.net/2020/06/29/excel-dna-version-1-1/), released in June 2020 and includes numerous improvements and bug-fixes.
+The current version is [Excel-DNA v1.1], released in June 2020 and includes numerous improvements and bug-fixes.
 
+[Excel-DNA v1.1]: https://excel-dna.net/2020/06/29/excel-dna-version-1-1/
 [paypal-link]: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=92N99RV5NQ29C&amp;lc=US&amp;item_name=Govert%20van%20Drimmelen&amp;item_number=ExcelDna&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted
 [paypal-image]: https://www.paypal.com/en_GB/i/btn/btn_donateCC_LG.gif "Donate via PayPal"
