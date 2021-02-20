@@ -22,7 +22,7 @@ Excel versions '97 through 2016 can be targeted with a single add-in. Advanced E
 
 Most managed UDF assemblies developed for Excel Services can be exposed to the Excel client with no modification. (Please contact us if you are interested in this feature)
 
-The latest release - [Excel-DNA version 1.00](https://excel-dna.net/2019/03/17/excel-dna-version-1-0/) - includes support for both RTD-based asynchronous worksheet functions (Excel 2002 and later) and native Excel asynchronous functions (Excel 2010 and later). The RTD-based asynchronous support is designed to (optionally) integrate with the .NET 4.0 Task-based operations, as well as the Reactive Extensions library, allowing IObservables to be exposed as 'live' worksheet UDFs - (thus 'RxExcel'). The language-specific support for asynchronous functions in C# 5, Visual Basic 11 and F# 2.0 can be easily integrated with the Excel-DNA asynchronous interfaces.
+The latest release - [Excel-DNA v1.1] - includes support for both RTD-based asynchronous worksheet functions (Excel 2002 and later) and native Excel asynchronous functions (Excel 2010 and later). The RTD-based asynchronous support is designed to (optionally) integrate with the .NET 4.0 Task-based operations, as well as the Reactive Extensions library, allowing IObservables to be exposed as 'live' worksheet UDFs - (thus 'RxExcel'). The language-specific support for asynchronous functions in C# 5, Visual Basic 11 and F# 2.0 can be easily integrated with the Excel-DNA asynchronous interfaces.
 
 ## Important Links
 The home page for Excel-DNA is at [http://www.excel-dna.net](http://www.excel-dna.net).
@@ -110,6 +110,7 @@ If you are a VBA developer interested in moving to .NET, you should start with [
 - As a comprehensive example using many of the Excel-DNA features, be inspired by the [Financial Analytics Suite (FinAnSu)](http://brymck.github.com/finansu/), an open-source C# add-in built by Bryan McKelvey.
 - [Ross McLean](https://web.archive.org/web/20140902002824/http://www.blog.methodsinexcel.co.uk/2010/08/16/why-excel-dna/) has a series of posts on getting started with Excel-DNA.
 - [Mikael Katajamäki shows how to use Microsoft Solver Foundation to build a curve fitting function for Excel](http://mikejuniperhill.blogspot.com/2013/06/using-ms-solver-foundation-and-c-in.html)
+- [Mikael Katajamäki shows how to use C++/CLI code as a wrapper class for native (Quantlib based) C++ code and interfaced the C# client code to Excel by using Excel-DNA] http://mikejuniperhill.blogspot.com/2018/10/wilmott-software-interoperability-in.html
 - [Simon Murphy - xlls with Excel-DNA](http://smurfonspreadsheets.wordpress.com/2010/02/18/xlls-with-exceldna/)
 - [Ed Parcell - Numerical analysis in Excel using C# with Excel-DNA and AlgLib](https://web.archive.org/web/20100511213800/http://edparcell.posterous.com/tag/excel)
 - [Mathias Brandewinder - Mutant Excel with .NET and Excel-DNA](http://www.clear-lines.com/blog/post/Mutant-Excel-and-Net-with-ExcelDNA.aspx)
@@ -206,8 +207,9 @@ The Excel-DNA Runtime is free for all use, and distributed under a permissive op
 Originally, the project was hosted on [https://exceldna.codeplex.com](https://exceldna.codeplex.com), where you can still download the site in it's historic state as a package. After CodePlex' shutdown the archive site is however mostly unusable by now.
 
 ## Latest Releases
-The current version is [Excel-DNA v1.1](https://excel-dna.net/2020/06/29/excel-dna-version-1-1/), released in June 2020 and includes numerous improvements and bug-fixes.
+The current version is [Excel-DNA v1.1], released in June 2020 and includes numerous improvements and bug-fixes.
 
+[Excel-DNA v1.1]: https://excel-dna.net/2020/06/29/excel-dna-version-1-1/
 [paypal-link]: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=92N99RV5NQ29C&amp;lc=US&amp;item_name=Govert%20van%20Drimmelen&amp;item_number=ExcelDna&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted
 [paypal-image]: https://www.paypal.com/en_GB/i/btn/btn_donateCC_LG.gif "Donate via PayPal"
 [acq-releases]: https://github.com/ratesquant/ACQ/releases
