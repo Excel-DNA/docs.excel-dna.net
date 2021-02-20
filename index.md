@@ -98,6 +98,8 @@ To run any of the sample .dna files, make a copy of the `Distribution\ExcelDna.x
 
 - [ExcelDna-Unpack](https://github.com/augustoproiete/exceldna-unpack) is a command-line utility to extract the contents of Excel-DNA add-ins packed with [ExcelDnaPack](exceldna-packing-tool.md)
 - [ExcelDna.Abstractions](https://github.com/augustoproiete/exceldna-abstractions) facilitates mocking & unit testing of Excel-DNA Add-Ins
+- [ExcelDna.WiXInstaller](https://github.com/Excel-DNA/WiXInstaller) is a user-contributed template (thank you very much to Lee Zeitz!) for making a WiX-based installer for an Excel-DNA add-in.
+- [ExcelDna.StrongName](https://github.com/Excel-DNA/ExcelDna.StrongName) provides strong name key pair used to sign Excel-DNA assemblies.
 - [ExcelDna.Diagnostics.Serilog](https://github.com/augustoproiete/exceldna-diagnostics-serilog) integrates Excel-DNA Diagnostic Logging with your Serilog logging pipeling within your Excel-DNA Add-In
 - [Serilog.Sinks.ExcelDnaLogDisplay](https://github.com/augustoproiete/serilog-sinks-exceldnalogdisplay) is a Serilog sink that writes events to Excel-DNA LogDisplay
 - [Serilog.Enrichers.ExcelDna](https://github.com/augustoproiete/serilog-enrichers-exceldna) is a Serilog Enricher with properties from Excel-DNA Add-Ins
