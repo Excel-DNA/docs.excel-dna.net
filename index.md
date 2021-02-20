@@ -123,7 +123,7 @@ The Excel-DNA Runtime is free for all use, and distributed under a permissive op
 Originally, the project was hosted on [https://exceldna.codeplex.com](https://exceldna.codeplex.com), where you can still download the site in it's historic state as a package. After CodePlex' shutdown the archive site is however mostly unusable by now.
 
 ## Latest Releases
-The current version is [Excel-DNA v1.00](https://excel-dna.net/2019/03/17/excel-dna-version-1-0/), released in March 2019 and includes numerous bug-fixes as well as improvements to the build-time Visual Studio integration
+The current version is [Excel-DNA v1.1](https://excel-dna.net/2020/06/29/excel-dna-version-1-1/), released in June 2020 and includes numerous improvements and bug-fixes.
 
 [paypal-link]: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=92N99RV5NQ29C&amp;lc=US&amp;item_name=Govert%20van%20Drimmelen&amp;item_number=ExcelDna&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted
 [paypal-image]: https://www.paypal.com/en_GB/i/btn/btn_donateCC_LG.gif "Donate via PayPal"
