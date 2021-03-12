@@ -145,6 +145,7 @@ If you are a VBA developer interested in moving to .NET, you should start with [
 - [Jon Nyman's FxToExcel add-in](https://github.com/jon49/FxToExcel) brings financial program data into Excel.
 - [Stock Quote Add-In for Excel](https://github.com/jbaurle/PMStockQuote) provides access to the Yahoo financial data through an Excel-DNA add-in.
 - [DB-Addin for Excel](https://rkapl123.github.io/DBAddin/) is an MS Excel Addin for retrieving Database data via userdefined functions into Excel and writing Data (DBMapper), executing generic DML (DBAction) and doing all this in Sequences (DBSequence).
+- [Datepicker](https://github.com/rkapl123/DatePicker) is a replacement for the MSCOMCT2 based Datepicker that Microsoft abandoned in 64bit versions of Excel. It passes the .NET MonthCalendar widget to VBA Userforms.
 - Alex Chirokov's **ACQ** add-in provides a library of interpolation routines for Excel. The add-in includes 1D and 2D interpolators, scatter plot smoothing and a Mersenne Twister random number generator. To have a closer look:
     - Find the current release on GitHub: [https://github.com/ratesquant/ACQ/releases][acq-releases]
     - With the main repository on GitHub at [https://github.com/ratesquant/ACQ][acq-repo]

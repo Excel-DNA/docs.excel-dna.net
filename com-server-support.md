@@ -21,7 +21,92 @@ COM visible classes in `ExternalLibrary` tags marked `ComServer="true"`, and COM
 These classes are (persistently) registered by calling `regsvr32 <MyAddin>.xll` or dynamically by the add-in (for example in an `AutoOpen` method) by calling `ComServer.DllRegisterServer()`, and
 unregistered by `regsvr32 /u <MyAddin>.xll` or by `ComServer.DllUnregisterServer()`.
 
+Following are short examples both in C-Sharp and VB, these only demonstrate the unreferenced (late-bound) technique:
+
+```csharp
+using ExcelDna.Integration;
+using ExcelDna.ComInterop;
+using System.Runtime.InteropServices;
+
+[ComVisible(true)]
+[ClassInterface(ClassInterfaceType.AutoDispatch)]
+[ProgId("ComAddin.FunctionLibrary")]
+public class AccessibleFunctions
+{
+	public double add(double x, double y)
+	{
+		return x + y;
+	}
+}
+
+[ComVisible(false)]
+class ExcelAddin : IExcelAddIn
+{
+	public void AutoOpen()
+	{
+		ComServer.DllRegisterServer();
+	}
+	public void AutoClose()
+	{
+		ComServer.DllUnregisterServer();
+	}
+}
+```
+
+The same in VB.NET
+
+```vb
+Imports ExcelDna.Integration
+Imports ExcelDna.ComInterop
+Imports System.Runtime.InteropServices
+
+<ClassInterface(ClassInterfaceType.AutoDispatch)>
+<ProgId("ComAddin.FunctionLibrary")>
+<ComVisible(True)>
+Public Class AccessibleFunctions
+
+    Public Function add(x As Double, y As Double)
+        Return x + y
+    End Function
+
+End Class
+
+<ComVisible(false)>
+Public Class AddInEvents
+    Implements IExcelAddIn
+
+    Public Sub AutoOpen() Implements IExcelAddIn.AutoOpen
+        ComServer.DllRegisterServer()
+    End Sub
+
+    Public Sub AutoClose() Implements IExcelAddIn.AutoClose
+        ComServer.DllUnregisterServer()
+    End Sub
+End Class
+```
+
+```xml
+<DnaLibrary Name="ComAddin" RuntimeVersion="v4.0">
+  <ExternalLibrary Path="ComAddin.dll" ComServer="true" />
+</DnaLibrary>
+```
+
+Usage in VBA:
+
+```vb
+Option Explicit
+
+Sub tester()
+    Dim lib As Object: Set lib = CreateObject("ComAddin.FunctionLibrary")
+    Debug.Print lib.Add(12, 13)
+    Set lib = Nothing
+End Sub
+```
+
+The VB.Net example is also available in the Samples repository [ComServerVB](https://github.com/Excel-DNA/Samples/tree/master/ComServerVB) after building it, start Excel by opening bin/release/ComAddin.xll or ComAddin64.xll (depending on your bitness) and enter the code under "Usage in VBA:" somewhere.
+
 Such classes can be accessed directly as RTD servers or from VBA using `CreateObject("MyServer.ItsProgId")`, and will be loaded in the add-in's AppDomain.
 (The add-in need not be loaded for registered classes to be accessed through COM.)
 
 A type library (.tlb) can be created for the assembly using tlbexp.exe, and will be registered if available (if the `.tlb` is found next to the `.dll`). If the assembly is packed in the .xll, the type library will be packed too.
+An example for this can be found in [DnaComServer](https://github.com/Excel-DNA/Samples/tree/master/DnaComServer).
