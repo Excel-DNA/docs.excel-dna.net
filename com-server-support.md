@@ -103,12 +103,10 @@ Sub tester()
 End Sub
 ```
 
-I've added a [ComAddinZip] package where the two examples are contained as Visual Studio 2019 solutions, after building (if the ExcelDNA NuGet packages are not automatically fetched, just enter the package manager, this should usually fetch them) start Excel by opening bin/release/ComAddin.xll or ComAddin64.xll (depending on your bitness) and open the Tester.xlsm.
-There you find the above mentioned VBA procedure.
+The VB.Net example is also available in the Samples repository [ComServerVB](https://github.com/Excel-DNA/Samples/tree/master/ComServerVB) after building it, start Excel by opening bin/release/ComAddin.xll or ComAddin64.xll (depending on your bitness) and enter the code under "Usage in VBA:" somewhere.
 
 Such classes can be accessed directly as RTD servers or from VBA using `CreateObject("MyServer.ItsProgId")`, and will be loaded in the add-in's AppDomain.
 (The add-in need not be loaded for registered classes to be accessed through COM.)
 
 A type library (.tlb) can be created for the assembly using tlbexp.exe, and will be registered if available (if the `.tlb` is found next to the `.dll`). If the assembly is packed in the .xll, the type library will be packed too.
-
-[ComAddinZip]: /assets/ComAddin.zip
+An example for this can be found in [DnaComServer](https://github.com/Excel-DNA/Samples/tree/master/DnaComServer).
