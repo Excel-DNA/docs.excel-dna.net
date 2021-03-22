@@ -125,6 +125,7 @@ If you are a VBA developer interested in moving to .NET, you should start with [
 - [Joao Morais - WCF client sample](http://blog.ilab8.com/2011/01/28/excel-dna/)
 - [teramonagi - Using R from Excel using Excel-DNA](http://mockquant.blogspot.com/2011/07/another-way-to-use-r-in-excel-for-net.html) (Also check out the [F# R type provider.](https://bluemountaincapital.github.io/FSharpRProvider/))
 - [Gert-Jan van der Kamp - Streaming real-time data to Excel](http://www.codeproject.com/Articles/662009/Streaming-realtime-data-to-Excel)
+- [Eddie Gahan - TransposeBy - Extending Excel With C# And Excel-DNA](https://www.c-sharpcorner.com/article/transposeby-extending-excel-with-c-sharp-and-excel-dna/)
 
 ### Various F# Examples
 - a [wrapper for the ExcelReference type and C API](https://gist.github.com/mndrake/5963107) with some cell access features,
