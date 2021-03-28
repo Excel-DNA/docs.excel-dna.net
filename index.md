@@ -78,6 +78,7 @@ Alternatively, get the full package [Excel-DNA Download](https://github.com/Exce
 - [Async macro example - formatting the calling cell from a UDF](async-macro-example-formatting-the-calling-cell-from-a-udf.md)
 - [Enumerating Excel COM Automation collections in VB.NET](enumerating-excel-com-automation-collections-in-vbnet.md)
 - [Modal dialog on new thread](modal-dialog-on-new-thread.md)
+- [Utilizing custom XML parts in Excel Workbooks](customXMLparts.md)
 
 ## Samples
 
