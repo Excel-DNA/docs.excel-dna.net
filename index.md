@@ -110,6 +110,7 @@ To run any of the sample .dna files, make a copy of the `Distribution\ExcelDna.x
 If you are a VBA developer interested in moving to .NET, you should start with [Patrick O'Beirne's detailed VBA to Excel-DNA migration guide](http://sysmod.wordpress.com/2012/11/06/migrating-an-excel-vba-add-in-to-a-vb-net-xll-with-excel-dna-update/).
 
 ### Various Samples and Tutorials
+- [Hugo Diz - TextUtilsDNA](https://github.com/hugodiz/TextUtilsDNA) is a useful text processing add-in, and also a nice example add-in created with VB.NET.
 - As a comprehensive example using many of the Excel-DNA features, be inspired by the [Financial Analytics Suite (FinAnSu)](http://brymck.github.com/finansu/), an open-source C# add-in built by Bryan McKelvey.
 - [Ross McLean](https://web.archive.org/web/20140902002824/http://www.blog.methodsinexcel.co.uk/2010/08/16/why-excel-dna/) has a series of posts on getting started with Excel-DNA.
 - [Mikael Katajamäki shows how to use Microsoft Solver Foundation to build a curve fitting function for Excel](http://mikejuniperhill.blogspot.com/2013/06/using-ms-solver-foundation-and-c-in.html)
