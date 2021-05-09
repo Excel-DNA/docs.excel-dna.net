@@ -81,4 +81,4 @@ Here the name is usually in the (one and only) attribute "name" of the element, 
 
 			' finally create the DBModif Object and fill parameters into CustomXMLPart:
 			Dim newDBModif As DBModif = New DBModif(customXMLNodeDef, DBModiftype)
-...
+```
