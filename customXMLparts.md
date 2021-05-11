@@ -20,7 +20,7 @@ All CustomXMLParts Objects are found in the namespace `Microsoft.Office.Core`, r
 
 Fetching an existing CustomXMLParts XML document is done by selecting the required namespace:
 
-```VB
+```vbnet
         Dim CustomXmlParts As Object = ExcelDnaUtil.Application.ActiveWorkbook.CustomXMLParts.SelectByNamespace("DBModifDef")
 ```
 
@@ -37,13 +37,13 @@ Adding the XML document if the namespace doesn't yet exist (in a new workbook) i
 
 Sub elements are added with the Methond `AppendChildNode` of the selected node:
 
-```VB
+```vbnet
         ' NamespaceURI:="DBModifDef" is required to avoid adding a xmlns attribute to each element.
         CustomXmlParts(1).SelectSingleNode("/ns0:root").AppendChildNode(createdDBModifType, NamespaceURI:="DBModifDef")
 ```
 
 The appended child element is placed last, to append further child elements, you need to call `LastChild`
-```VB
+```vbnet
         Dim dbModifNode As CustomXMLNode = CustomXmlParts(1).SelectSingleNode("/ns0:root").LastChild
         ' append the detailed settings to the definition element
         dbModifNode.AppendChildNode("Name", NodeType:=MsoCustomXMLNodeType.msoCustomXMLNodeAttribute, NodeValue:=createdDBModifType + Guid.NewGuid().ToString())
@@ -54,7 +54,7 @@ The appended child element is placed last, to append further child elements, you
 ### Retrieving elements
 
 When retrieving element values, it's a good idea to check for the count of nodes contained to avoid exceptions:
-```VB
+```vbnet
         Dim nodeCount As Integer = definitionXML.SelectNodes("ns0:" + nodeName).Count
         If nodeCount = 0 Then
             getParamFromXML = "" ' optional nodes become empty strings
@@ -68,7 +68,7 @@ When retrieving element values, it's a good idea to check for the count of nodes
 When iterating through nodes you take the `ChildNodes` method of the (root) node object and us `BaseName` of the iterator variable (node object) to get it's element name.
 Here the name is usually in the (one and only) attribute "name" of the element, so if that exists, it is taken as the nodes name.
 
-```VB
+```vbnet
 	For Each customXMLNodeDef As CustomXMLNode In CustomXmlParts(1).SelectSingleNode("/ns0:root").ChildNodes
 		Dim DBModiftype As String = Left(customXMLNodeDef.BaseName, 8)
 		If DBModiftype = "DBSeqnce" Or DBModiftype = "DBMapper" Or DBModiftype = "DBAction" Then

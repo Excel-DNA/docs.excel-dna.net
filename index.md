@@ -79,6 +79,7 @@ Alternatively, get the full package [Excel-DNA Download](https://github.com/Exce
 - [Enumerating Excel COM Automation collections in VB.NET](enumerating-excel-com-automation-collections-in-vbnet.md)
 - [Modal dialog on new thread](modal-dialog-on-new-thread.md)
 - [Utilizing custom XML parts in Excel Workbooks](customXMLparts.md)
+- [Checking for updates and download of Excel-DNA Addins (or other .NET based programs)](update-check-download.md)
 
 ## Samples
 
