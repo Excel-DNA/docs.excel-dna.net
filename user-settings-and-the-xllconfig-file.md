@@ -40,10 +40,10 @@ In the configuration file there are two ways to extend the settings to other fil
 
 * by adding a UserSettings section in specifying it in the configSections element as a type of `System.Configuration.NameValueSectionHandler`
 * by adding file names or paths to additional NameValueSection config files that enhance both the app settings and the user settings
- * the attribute name for the file name in the user settings is `configSource`,
- * the attribute name for app settings file is `file`
+	* the attribute name for the file name in the user settings is `configSource`,
+	* the attribute name for app settings file is `file`
 
-Below, there is an example of an app config (name it as described in [Basic Usage](Basic-Usage)) that defines both app settings, including a separate AppSettings NameValueSection File and User Settings, including a separate UserSettings NameValueSection File as well.
+Below, there is an example of an app config (name it as described in [Basic Usage](#basic-usage)) that defines both app settings, including a separate AppSettings NameValueSection File and User Settings, including a separate UserSettings NameValueSection File as well.
 
 ```xml
 <configuration>
@@ -63,7 +63,8 @@ Below, there is an example of an app config (name it as described in [Basic Usag
 
 The UserSettings and AppSettings NameValueSection files are just repetitions of the UserSettings or appSettings elements:
 
-* content of `AppSettings.config`
+* content of `AppSettings.config`  
+
 ```xml
 <appSettings>
     <add key="keyname0" value="3" />
@@ -71,7 +72,8 @@ The UserSettings and AppSettings NameValueSection files are just repetitions of 
 </appSettings>
 ```
 
-* content of `UserSettings.config`
+* content of `UserSettings.config`  
+
 ```xml
 <UserSettings>
     <add key="keyname2" value="3" />
@@ -82,14 +84,14 @@ The UserSettings and AppSettings NameValueSection files are just repetitions of 
 Having these three config files in place, you can then create a mechanism to have a central config file and user config files with either
 
 * central config file overriding the user config files or
-* user config files overriding the central config file
+* user config files overriding the central config file,
 
 depending on your needs.
 
-Below, the second method is implemented in a VB.NET function that fetches a setting regardless whether it is found in the central or the user config, however the user config always has precedence.
+Below, the second method is implemented in a VB.NET function that fetches a setting regardless whether it is found in the central or the user config, however the user config always has precedence. If nothing is found then the passed defaultValue is returned.
 The class `NameValueCollection` is taken from `System.Collections.Specialized.NameValueCollection`
 
-```VB
+```vbnet
     Public Function fetchSetting(Key As String, defaultValue As String) As String
         Dim AddinUserSettings As Collections.Specialized.NameValueCollection = Nothing
         Dim AddinAppSettings As Collections.Specialized.NameValueCollection = Nothing
