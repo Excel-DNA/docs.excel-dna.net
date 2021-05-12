@@ -17,6 +17,15 @@ Another VB Example is in the tutorials: [RibbonBasics](https://github.com/Excel-
 
 If you look for the imageMso identifiers for the built-in ribbon controls, these can easily be looked up when customizing the ribbon (context menu "customize menu" in the ribbon) and hovering over the control of interest (the imageMso is shown in brackets after the control name).
 
+To create dynamically set up ribbons, you need to build the xml also in a callback method (GetCustomUI). The below example shows a class that handles dynamic ribbon elements (also handling menu visibility, dynamic screentip and image display, dropdowns and recursive menus) 
+as well as context menus (cell, row, column etc.), utilization of an inbuilt commandbar.
+To create dynamically set up ribbons, you need to build the xml also in a callback method (GetCustomUI). The [RibbonVB Example](https://github.com/Excel-DNA/Samples/tree/master/RibbonVB) in the Samples repository shows a project that handles dynamic ribbon elements (also handling menu visibility, dynamic screentip and image display, dropdowns and recursive menus) 
+as well as context menus (cell, row, column etc.), utilization of an inbuilt commandbar and handling of VBE.Interop Command buttons.
+
+Another VB Example is in the tutorials: [RibbonBasics](https://github.com/Excel-DNA/Tutorials/tree/master/Fundamentals/RibbonBasics), a Csharp Example can be found in [Ribbon](https://github.com/Excel-DNA/Samples/tree/master/Ribbon).
+
+If you look for the imageMso identifiers for the built-in ribbon controls, these can easily be looked up when customizing the ribbon (context menu "customize menu" in the ribbon) and hovering over the control of interest (the imageMso is shown in brackets after the control name).
+
 ## References
 
 ### Articles on MSDN:
