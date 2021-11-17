@@ -2,7 +2,7 @@
 layout: page
 title: "Range Parameters"
 ---
-Parameters with the type of Excel's Range COM object are not directly supported by Excel-DNA.  There is a list of allowed parameter types here: [Reference](Reference)
+Parameters with the type of Excel's Range COM object are not directly supported by Excel-DNA.  There is a list of allowed parameter types here: [Reference for data types in UDFs](reference-data-type-marshalling.md)
 
 If you want the function to also accept a sheet reference, your parameter should be of type 'object' and marked with an <ExcelArgument(AllowReference:=true)> attribute. In that case you'll get an object of type ExcelDna.Integration.ExcelReference if the function is called with a sheet reference.
 
