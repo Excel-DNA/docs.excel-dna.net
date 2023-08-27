@@ -1,4 +1,7 @@
-# Excel-DNA properties in SDK-style project files
+---
+layout: page
+title: "Excel-DNA properties in SDK-style project files"
+---
 
 The following project properties are recognized by the Excel-DNA build task, and can be used to customize the build output.
 By setting the appropriate properties, the old-style project .dna files are no longer needed when using SDK-style project files.
